@@ -126,12 +126,18 @@ module.exports = function(grunt) {
           '<%= buildVendorsPath %>': ['<%= buildVendorsPath %>']
         }
       }
+    },
+    'heroku-deploy' : {
+        production : {
+            deployBranch : 'production'
+        }
     }
   });
 
   grunt.registerTask('common', ['bower', 'browserify', 'copy']);
   grunt.registerTask('dev', ['config:dev', 'common', 'express', 'watch']);
   grunt.registerTask('prod', ['config:prod', 'common', 'uglify']);
+  grunt.registerTask('deploy', ['heroku-deploy']);
   grunt.registerTask('default', ['dev']);
 
 };
