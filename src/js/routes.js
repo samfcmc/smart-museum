@@ -27,6 +27,12 @@
           templateUrl: '/views/object.html',
           controller: controllers.Object
         });
+
+        $stateProvider.state('tags', {
+          url: '/tags',
+          templateUrl: '/views/tags.html',
+          controller: controllers.Tags
+        })
     }]);
 
   };

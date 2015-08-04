@@ -14,9 +14,11 @@
       function($scope, Resource) {
 
         SmartPlaces.onInit(function() {
-          Resource.collections({}, function(response) {
-            $scope.collections = response;
-          });
+          console.log('Smart Places Initialized');
+        });
+
+        Resource.collections({}, function(response) {
+          $scope.collections = response;
         });
 
 
