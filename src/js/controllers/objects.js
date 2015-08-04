@@ -8,9 +8,9 @@
 
   var name = 'ObjectsCtrl';
 
-  module.exports = function(app, resource) {
-    app.controller(name, ['$scope', '$stateParams', resource,
-      function($scope, $stateParams, Resource) {
+  module.exports = function(app, resource, objectHolder) {
+    app.controller(name, ['$scope', '$stateParams', '$state', resource, objectHolder,
+      function($scope, $stateParams, $state, Resource, ObjectHolder) {
 
         $scope.page = 1;
         $scope.nextPage = false;
@@ -37,9 +37,9 @@
           }
         };
 
-        $scope.tag = function(id) {
-          //TODO:
-          console.log(id);
+        $scope.tag = function(object) {
+          ObjectHolder.hold(object);
+          $state.go('object');
         }
 
     }]);

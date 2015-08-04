@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{object.Title}}</h3>
+    </div>
+    <div class="panel-body">
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object"
+            ng-src="{{object.PrimaryImage.Medium}}" alt="{{object.Title}}">
+          </a>
+        </div>
+        <div class="media-body">
+          {{object.Description}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      Press the scan button in the app to tag this object
+    </div>
+  </div>
+</div>

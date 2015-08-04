@@ -9,7 +9,8 @@
   var app = angular.module('app', ['ui.router', 'ngResource']);
 
   var resources = require('./resources')(app);
-  var controllers = require('./controllers')(app, resources);
+  var services = require('./services')(app);
+  var controllers = require('./controllers')(app, resources, services);
   require('./routes')(app, controllers);
 
   app.run(['$rootScope', '$http', function($rootScope, $http) {

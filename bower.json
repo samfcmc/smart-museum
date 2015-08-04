@@ -19,11 +19,11 @@
     "tests"
   ],
   "dependencies": {
-    "smartplaces-js": "0.0.9",
     "angular": "1.4.3",
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.5",
     "angular-ui-router": "~0.2.15",
-    "angular-resource": "~1.4.3"
+    "angular-resource": "~1.4.3",
+    "smartplaces-js": "~0.0.12"
   }
 }

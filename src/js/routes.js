@@ -21,6 +21,12 @@
           templateUrl: '/views/objects.html',
           controller: controllers.Objects
         });
+
+        $stateProvider.state('object', {
+          url: '/object',
+          templateUrl: '/views/object.html',
+          controller: controllers.Object
+        });
     }]);
 
   };
