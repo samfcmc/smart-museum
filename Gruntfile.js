@@ -88,6 +88,16 @@ module.exports = function(grunt) {
             dest: '<%= buildPath %>/styles'
           }
         ]
+      },
+      fonts: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= bowerComponents %>/bootstrap/fonts',
+            src: ['**/*.*'],
+            dest: '<%= buildPath %>/fonts'
+          }
+        ]
       }
     },
     watch: {

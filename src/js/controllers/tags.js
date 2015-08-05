@@ -18,7 +18,18 @@
           });
         }
       });
-      
+
+      $scope.deleteTag = function(tag) {
+        SmartPlaces.deleteTag(tag, {
+          success: function() {
+            $scope.$apply(function() {
+              var i = $scope.tags.indexOf(tag);
+              $scope.tags.splice(i, 1);  
+            });
+          }
+        });
+      }
+
     }]);
 
     return name;
