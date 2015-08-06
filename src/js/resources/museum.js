@@ -25,10 +25,12 @@
               page: '@page'
             }
           },
-          object: objectUrl,
-          methid: 'GET',
-          params: {
-            id: '@id'
+          object: {
+            url: objectUrl,
+            method: 'GET',
+            params: {
+              id: '@id'
+            }
           }
         }
       );

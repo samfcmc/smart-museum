@@ -19,8 +19,7 @@
         });
 
         $scope.updateTag = function(tag) {
-          $scope.tag = tag;
-          resource.object({id: objectId}, function(response) {
+          Resource.object({id: tag.objectId}, function(response) {
             $scope.object = response.Data;
           });
         };
