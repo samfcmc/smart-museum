@@ -12,7 +12,6 @@
     app.controller(name, ['$scope', resource,
       function($scope, Resource) {
         SmartPlaces.onTagFound(function(tag) {
-          alert(tag);
           $scope.$apply(function() {
             $scope.updateTag(tag);
           });
