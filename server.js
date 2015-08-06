@@ -35,7 +35,15 @@ app.get('/collections/:id/objects', function(req, res) {
   client.get(url, function(data, response) {
     res.send(data);
   });
-})
+});
+
+app.get('/objects/:id', function(req, res) {
+  var id = req.params.id;
+  var url = getWaltersAPIUrl('/objects/' + id);
+  client.get(url, function(data, response) {
+    res.send(data);
+  });
+});
 
 app.use('/static', express.static(__dirname + '/build/bower_components'));
 app.use('/js', express.static(__dirname + '/build/js'));

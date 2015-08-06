@@ -5,7 +5,26 @@
   </head>
   <body ng-app="app">
     <div class="container" ng-controller="ClientCtrl">
-      {{apiInfo}}
+      <div class="row" ng-if="object">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{object.Title}}</h3>
+          </div>
+          <div class="panel-body">
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object"
+                ng-src="{{object.Images.ImageURLs.Medium}}"
+                alt="{{object.Title}}">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">{{object.Name}}</h4>
+                {{object.Description}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="/js/vendors.js"></script>

@@ -8,6 +8,7 @@
     app.factory(name, ['$resource', '$rootScope', function($resource, $rootScope) {
       var collectionsUrl = '/collections'
       var objectsUrl = collectionsUrl + '/:id/objects';
+      var objectUrl = '/objects/:id';
 
       return $resource('',
         {},
@@ -23,6 +24,11 @@
               id: '@id',
               page: '@page'
             }
+          },
+          object: objectUrl,
+          methid: 'GET',
+          params: {
+            id: '@id'
           }
         }
       );
