@@ -11,13 +11,10 @@
   module.exports = function(app, resource, SmartPlaces) {
     app.controller(name, ['$scope', resource,
       function($scope, Resource) {
-        SmartPlaces.onInit(function() {
-          alert('Smart Places initialized');
-          SmartPlaces.onTagFound(function(tag) {
-            alert(tag);
-            $scope.$apply(function() {
-              $scope.updateTag(tag);
-            });
+        SmartPlaces.onTagFound(function(tag) {
+          alert(tag);
+          $scope.$apply(function() {
+            $scope.updateTag(tag);
           });
         });
 
