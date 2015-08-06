@@ -6,12 +6,11 @@
 
   module.exports = function(app) {
     app.factory(name, ['$resource', '$rootScope', function($resource, $rootScope) {
-      var baseUrl = 'http://api.thewalters.org/v1';
-      var collectionsUrl = baseUrl + '/collections'
+      var collectionsUrl = '/collections'
       var objectsUrl = collectionsUrl + '/:id/objects';
 
-      return $resource(baseUrl,
-        {apiKey: $rootScope.apiInfo.apiKey},
+      return $resource('',
+        {},
         {
           collections: {
             url: collectionsUrl,

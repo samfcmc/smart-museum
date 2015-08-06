@@ -13,12 +13,14 @@
     var objects = require('./objects')(app, museumResource, objectHolder);
     var object = require('./object')(app, objectHolder, SmartPlaces);
     var tags = require('./tags')(app, SmartPlaces);
+    var client = require('./client')(app, museumResource, SmartPlaces);
 
     return {
       Collections: collections,
       Objects: objects,
       Object: object,
-      Tags: tags
+      Tags: tags,
+      Client: client
     };
   };
 
