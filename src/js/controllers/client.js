@@ -12,7 +12,7 @@
     app.controller(name, ['$scope', resource,
       function($scope, Resource) {
         SmartPlaces.onInit(function() {
-          console.log('Smart Places initialized');
+          alert('Smart Places initialized');
           SmartPlaces.onTagFound(function(tag) {
             alert(tag);
             $scope.$apply(function() {
