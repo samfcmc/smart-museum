@@ -1,45 +1,26 @@
-# SLOC-API-and-RestApp
-A simple web application to order food in a restaurant
-Also, it offers an interface to manage the orders.
+# Smart Museum
+Smart Museum app based on Smart-Places approach
 
 ## Requirements
-### Using Vagrant
-* [Virtualbox](https://www.virtualbox.org/)
-* [Vagrant](https://www.vagrantup.com/)
+- [NodeJS](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
+- [Grunt CLI](https://gruntjs.com/getting-started)
 
-### Using Grunt
-* [NodeJS](https://nodejs.org/)
-* [NPM](https://www.npmjs.com/)
-* [Grunt-cli](http://gruntjs.com/)
-
-After installing nodejs and npm you can install grunt with:
-```
-npm install -g grunt-cli
-```
 ## Run in your local machine:
-### Using vagrant
-In the project's root directory (the same directory where is the ```Vagrantfile```) run:
-```
-vagrant up
+### Install dependencies
+First, you need to install all the dependencies. Simply use npm:
+```bash
+npm install
 ```
 
-To stop it:
-```
-vagrant halt
-```
-### Using grunt
+### Running
 Just run:
 ```
 grunt
 ```
-This command will open a web browser window in the address where your web application is running.
 
-
-After you start the local web server using any of the methods above, you can access it in:
+After you start the local web server you can access the web app in:
 http://localhost:9000
 
-The user's app is located at:
-http://localhost:9000/restApp/restapp.html
-
-The manager's app is located at:
-http://localhost:9000/restApp/restmanager.html
+This web app will only work well running inside of the [Smart Places Android app](https://github.com/samfcmc/master-thesis/tree/master/SmartPlacesAndroid).
+This was just an academic project I develop to try to demonstrate that this concept works.
